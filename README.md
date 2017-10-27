@@ -4,7 +4,7 @@ This repo contains source files for hosting a simple web server for showing lap 
 ## Getting started
 To get the code up and running:
 - Install node.js and npm
-- Instal node packages `npm install`
+- Install node packages `npm install`
 - Run server `node server.js`
 - Access page at localhost:8008
 

@@ -1,0 +1,133 @@
+include mixins
+
+doctype 
+html( lang="en" )
+    head        
+        title SlotCarduino
+        link(href='views/bg.css', rel='stylesheet')
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        meta( name='description', content='Baking Bootstrap Snippets with Jade' )
+        //Bootswatch Theme
+        +bootswatch("united")
+
+    body(style="padding-bottom:10rem;")
+        .container
+        script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+        script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )        
+
+        script( src='node_modules/socket.io-client/dist/socket.io.js' )
+        //script( src='views/refresh.js' )
+        script.
+            var socket = io("http://localhost:8082");
+            socket.on('fileChanged', function(msg){
+                //alert(msg);
+                location.reload();
+            });
+
+        +nav("SlotCarduino", "dropdown_menu")
+            +nav_item( "index.html", "active" ) Home
+            +nav_item( "about.html" ) About
+            +nav_item( "contact.html" ) Contact
+            +nav_item_dropdown( "#" )( label="Dropdown" )
+                +nav_item( "#" ) Action
+                +nav_item( "#" ) Another action
+                +nav_item( "#" ) Something else here
+                +nav_divider
+                +nav_header Nav header
+                +nav_item( "#" ) Separated link
+                +nav_item( "#" ) One more separated link
+        .jumbotron.bgimg
+            .row
+                .col-md-3.col-sm-6.col-xs-12
+                .col-md-6.col-sm-6.col-xs-12
+                    div.white
+                        h1 SlotCarduino
+                        p By Avalon Innovation
+        center  
+            .row
+                .col-md-2.col-sm-6.col-xs-12
+                .col-md-4.col-sm-6.col-xs-12
+                    div
+                        h2 Lane 1 top 10
+                        table.table.table-striped.table-bordered
+                            thead.thead-inverse
+                                tr
+                                    th #
+                                    th Time
+                                    th Programmer
+                                    th Car
+                            tbody
+                                - for (var i = 0; i < 10; ++i) {
+                                  if lane1[i].status=='new'
+                                      tr.success
+                                          th= i+1
+                                          th= lane1[i].time
+                                          th= lane1[i].name
+                                          th= lane1[i].car
+                                  else
+                                      tr
+                                          th= i+1
+                                          th= lane1[i].time
+                                          th= lane1[i].name
+                                          th= lane1[i].car
+                                - }
+                                    
+                .col-md-4.col-sm-6.col-xs-12
+                    div
+                        h2 Lane 2 top 10
+                        table.table.table-striped.table-bordered
+                            thead.thead-inverse
+                                tr
+                                    th #
+                                    th Time
+                                    th Programmer
+                                    th Car
+                            tbody
+                                - for (var i = 0; i < 10; ++i) {
+                                  if lane2[i].status=='new'
+                                      tr.success
+                                          th= i+1
+                                          th= lane2[i].time
+                                          th= lane2[i].name
+                                          th= lane2[i].car
+                                  else
+                                      tr
+                                          th= i+1
+                                          th= lane2[i].time
+                                          th= lane2[i].name
+                                          th= lane2[i].car
+                                - }
+
+                       
+            .row
+                .col-md-2.col-sm-6.col-xs-12
+                .col-md-8.col-sm-6.col-xs-12
+                    div
+                        h2 Latest times
+                        table.table.table-striped.table-bordered
+                            thead.thead-inverse
+                                tr
+                                    th Time
+                                    th Programmer
+                                    th Car
+                                    th Lane
+                                    th FW version
+                            tbody
+                                - for (var i = 0; i < 20; ++i) {
+                                  if i==0
+                                      tr.info
+                                          th= latest[i].time
+                                          th= latest[i].name
+                                          th= latest[i].car
+                                          th= latest[i].lane
+                                          th= latest[i].ver
+                                  else
+                                      tr
+                                          th= latest[i].time
+                                          th= latest[i].name
+                                          th= latest[i].car
+                                          th= latest[i].lane
+                                          th= latest[i].ver
+                                - }

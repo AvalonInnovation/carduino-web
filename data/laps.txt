@@ -1,0 +1,15 @@
+{"protocolVersion":"0.0.1","lane":"1","timestamp":"0","laptime":"10.0","carID":"1","programmerID":"Test1","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"1","timestamp":"0","laptime":"20.0","carID":"2","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"1","timestamp":"0","laptime":"15.0","carID":"3","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"1","timestamp":"0","laptime":"10.0","carID":"3","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"1","timestamp":"0","laptime":"15.0","carID":"3","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"1","timestamp":"0","laptime":"9.0","carID":"3","programmerID":"Test3","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"1","timestamp":"0","laptime":"9.5","carID":"2","programmerID":"Test4","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"1","timestamp":"0","laptime":"11.5","carID":"2","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"2","timestamp":"0","laptime":"8.0","carID":"2","programmerID":"Test1","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"2","timestamp":"0","laptime":"4.0","carID":"2","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"2","timestamp":"0","laptime":"4.3","carID":"2","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"2","timestamp":"0","laptime":"4.5","carID":"2","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"2","timestamp":"0","laptime":"4.0","carID":"2","programmerID":"Test2","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"2","timestamp":"0","laptime":"3.1","carID":"2","programmerID":"Test3","controlProgramRevision":"1.0"}
+{"protocolVersion":"0.0.1","lane":"2","timestamp":"0","laptime":"3.5","carID":"2","programmerID":"Test3","controlProgramRevision":"1.0"}
